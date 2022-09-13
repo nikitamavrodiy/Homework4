@@ -4,17 +4,19 @@ public class Main {
         int userAge = 18;
         if (userAge >= 18)
             System.out.println("Поздравляем с совершеннолетием! Вам " + userAge +"!");
-        if (userAge < 18)
+        else
             System.out.println("Возраст совершеннолетия ещё не наступил, нужно немного подождать. Вам " + userAge +"!");
 
         //задание 2
         int age = 24;
-        if (age >= 7 || age < 18)
-            System.out.println("ребенок ходит в школу");
-        if (age >= 18 || age < 24)
-            System.out.println("человек уже закончил школу и может отправляться в университет");
-        if (age >= 24)
-            System.out.println("человек окончил университет и ему пора искать первую работу, если ему 24 и больше лет");
+        if (age >= 7) {
+            if (age < 18)
+                System.out.println("ребенок ходит в школу");
+            else if (age < 24)
+                System.out.println("человек уже закончил школу и может отправляться в университет");
+            else
+                System.out.println("человек окончил университет и ему пора искать первую работу, если ему 24 и больше лет");
+        }
 
         //задание 3
         int capacityCar = 102;
@@ -24,12 +26,12 @@ public class Main {
 
         if (passengers < 102) {
             if (passengers < seatingPlaces) {
-                System.out.println("В вагоне еще есть сидячие места");
+                System.out.println("В вагоне остались сидячие места и стоя");
             } else {
                 System.out.println("В вагоне еще есть места стоя");
             }
         } else {
-            System.out.println("В вагоне нет мест");
+            System.out.println("В вагоне нет свободных мест");
         }
 
     }
